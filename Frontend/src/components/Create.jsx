@@ -14,7 +14,7 @@ const Create = () => {
     e.preventDefault();
     const addUser = { name, email, age };
 
-    const response = await fetch(`http://localhost:5000/api/cards`, {
+    const response = await fetch(`https://id-card-uj01.onrender.com/api/cards`, {
       method: "POST",
       body: JSON.stringify(addUser),
       headers: {

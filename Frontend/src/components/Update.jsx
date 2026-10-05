@@ -31,13 +31,16 @@ const Update = () => {
     e.preventDefault();
     const updateUser = { name, email, age };
 
-    const response = await fetch(`http://localhost:5000/api/cards/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify(updateUser),
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      `https://id-card-uj01.onrender.com/api/cards/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(updateUser),
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-    });
+    );
 
     const result = await response.json();
 

@@ -26,9 +26,12 @@ const Show = () => {
   // Delete user
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/cards/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://id-card-uj01.onrender.com/api/cards/${id}`,
+        {
+          method: "DELETE",
+        },
+      );
 
       const result = await response.json();
 
