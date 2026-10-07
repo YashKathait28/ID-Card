@@ -8,7 +8,9 @@ const Show = () => {
   // Get all users
   const getData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/cards");
+      const response = await fetch(
+        "https://id-card-uj01.onrender.com/api/cards",
+      );
       const result = await response.json();
 
       if (!response.ok) {

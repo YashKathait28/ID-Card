@@ -11,7 +11,9 @@ const Update = () => {
   const navigate = useNavigate();
 
   const getSingleUser = async () => {
-    const response = await fetch(`http://localhost:5000/api/cards/${id}`);
+    const response = await fetch(
+      `https://id-card-uj01.onrender.com/api/cards/${id}`,
+    );
     const result = await response.json();
 
     if (!response.ok) {
